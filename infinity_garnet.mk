@@ -48,8 +48,8 @@ TARGET_BUILD_GOOGLE_TELEPHONY := true
 USE_MOTO_CALCULATOR := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="garnet_global-user 15 AQ3A.240912.001 OS2.0.4.0.VNRMIXM release-keys" \
-    BuildFingerprint=Redmi/garnet_global/garnet:15/AQ3A.240912.001/OS2.0.4.0.VNRMIXM:user/release-keys \
+    BuildDesc="garnet_global-user 15 AQ3A.240912.001 OS2.0.4.0.VNRCNXM release-keys" \
+    BuildFingerprint=Redmi/garnet_global/garnet:15/AQ3A.240912.001/OS2.0.4.0.VNRCNXM:user/release-keys \
     DeviceName=garnet \
     DeviceProduct=garnet_global
 
