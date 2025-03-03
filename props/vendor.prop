@@ -166,6 +166,14 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=142671872
 vendor.gralloc.disable_ubwc=0
 
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=50
+persist.sys.ui.hw=1
+persist.sys.ui.hw2=1
+persist.sys.ui.render=1
+persist.sys.hwui.disable_vsync=true
+
 # Keystore
 ro.hardware.keystore_desede=true
 
