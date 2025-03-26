@@ -87,8 +87,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'=(\d+)>', r'="\1">'),
     ('vendor/etc/init/hw/init.batterysecret.rc', 'vendor/etc/init/hw/init.mi_thermald.rc', 'vendor/etc/init/hw/init.qti.kernel.rc'): blob_fixup()
         .regex_replace(r'on charger', r'on property:init.svc.vendor.charger=running'),
-    'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
-        .regex_replace(r'.+dolby.+\n', ''),
     'vendor/etc/media_codecs_parrot_v0.xml': blob_fixup()
         .regex_replace(r'.+media_codecs_(google_audio|google_c2|google_telephony|vendor_audio).+\n', ''),
     'vendor/etc/perf/commonresourceconfigs.xml': blob_fixup()
@@ -103,6 +101,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('audio.primary.parrot.so', 'audio.primary.garnet.so'),         
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
+    ('vendor/lib64/libstagefright_soft_ddpdec.so', 'vendor/lib64/libdlbdsservice.so', 'vendor/lib64/libstagefright_soft_ac4dec.so', 'vendor/lib64/libstagefrightdolby.so'): blob_fixup()
+        .patchelf_version('0_17_2')
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),     
 }  # fmt: skip
 
 # Module definition
